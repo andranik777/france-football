@@ -1,3 +1,13 @@
+<?php
+include "functions/user-function.php";
+CheckUser();
+if(isset($_SESSION["email"])){
+    if($_SESSION["email"] !== "ddechamps"){
+        header("Location: index.php");
+    }
+}
+?>
+
 
 <?php
 

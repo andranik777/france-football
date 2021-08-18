@@ -1,4 +1,14 @@
 <?php
+include "functions/user-function.php";
+CheckUser();
+if(isset($_SESSION["email"])){
+    if($_SESSION["email"] !== "ddechamps"){
+        header("Location: index.php");
+    }
+}
+?>
+
+<?php
 $bdd = new PDO('mysql:host=localhost:3306;dbname=france-football;charset=utf8', 'root', 'Andranik1');
 
 

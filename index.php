@@ -1,8 +1,3 @@
-<?php
-include "functions/user-function.php";
-CheckUser();
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -28,17 +23,19 @@ include "functions/display-football.php";
     }
     ?>
     <?php
-    if($_SESSION["email"] == "ddechamps"){
-    echo '<div class="d-flex justify-content-center">
-        <div class="card text-center" style="width: 18rem; margin-top: 3rem">
-            <img class="card-img-top" src="public/images/cowritecar.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Créer un Joueur</h5>
-                <a href="footballor-create.php" class="btn btn-primary">Créer</a>
+    if(isset($_SESSION["email"])){
+        if($_SESSION["email"] == "ddechamps"){
+        echo '<div class="d-flex justify-content-center">
+            <div class="card text-center" style="width: 18rem; margin-top: 3rem">
+                <img class="card-img-top" src="public/images/cowritecar.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Créer un Joueur</h5>
+                    <a href="footballor-create.php" class="btn btn-primary">Créer</a>
+                </div>
             </div>
-        </div>
-
-    </div>';
+    
+        </div>';
+        }
     }
     ?>
 
